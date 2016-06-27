@@ -10,16 +10,71 @@ body {
 
 		.headline {
 			h1 {
-				margin: 20px 0 10px 0;
+				margin: 20px 0 0 0;
+				font-size: 4em;
 			}
 
 			h3 {
 				margin: 0;
+				color: #616161;
+				font-size: 1.4em;
 			}
 		}
 
-		.message-box {
-			margin: 50px 0 0 0;
+		.chat-area {
+			padding-top: 50px;
+			min-width: 300px;
+			width: 50%;
+			margin: 0 auto;
+
+			.message-thread {
+
+				ol.messages {
+					list-style: none;
+					padding-left: 0;
+
+					li {
+						display: list-item;
+						overflow: hidden;
+
+						.message {
+							padding: 10px;
+							border: 1px solid #ededed;
+							border-radius: 5px;
+							margin-bottom: 10px;
+							text-align: left;
+
+							&.user {
+								float: right;
+								background-color: #1E88E5;
+								color: #fff;
+							}
+
+							&.bot {
+								float: left;
+								background-color: #BDBDBD;
+							}
+						}
+					}
+				}
+			}
+
+			.message-box {
+				margin: 50px 0 0 0;
+
+				.ui.input {
+					width: 100%;
+
+					input {
+						border-color: rgba(34, 36, 38, 0.5);
+					}
+				}
+
+				.suggestions {
+					text-align: left;
+					padding: 10px 0 0 0;
+				}
+			}
 		}
 
 		.scroll-down {
